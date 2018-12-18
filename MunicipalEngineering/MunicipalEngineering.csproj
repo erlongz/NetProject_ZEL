@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CDF9833-E4A4-4037-A7B2-66385B52A066}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MunicipalEngineering</RootNamespace>
+    <AssemblyName>MunicipalEngineering</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcCui">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\AcCui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgdbrep">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\acdbmgdbrep.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\Autodesk.AutoCAD.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=20.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2016\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\..\..\..\app2016\SZFX\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\app2016\SZFX\DLL\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=1.0.5085.19864, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\app2016\SZFX\DLL\Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckProjectForm.Designer.cs">
+      <DependentUpon>CheckProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnCodeForm.Designer.cs">
+      <DependentUpon>EnCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EngineerStatusForm.Designer.cs">
+      <DependentUpon>EngineerStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileOrgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileOrgForm.Designer.cs">
+      <DependentUpon>FileOrgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniFile.cs" />
+    <Compile Include="MainUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainUserControl.Designer.cs">
+      <DependentUpon>MainUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapProcessUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapProcessUserControl.Designer.cs">
+      <DependentUpon>MapProcessUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetadataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetadataForm.Designer.cs">
+      <DependentUpon>MetadataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPrjForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPrjForm.Designer.cs">
+      <DependentUpon>NewPrjForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSubmitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectSubmitForm.Designer.cs">
+      <DependentUpon>ProjectSubmitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportGenForm.Designer.cs">
+      <DependentUpon>ReportGenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenOneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportGenOneForm.Designer.cs">
+      <DependentUpon>ReportGenOneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShapeLib.cs" />
+    <Compile Include="SHPForm_SZGC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHPForm_SZGC.Designer.cs">
+      <DependentUpon>SHPForm_SZGC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SZFXUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SZFXUserControl.Designer.cs">
+      <DependentUpon>SZFXUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SZGCFX.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpFileClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpFileClientForm.Designer.cs">
+      <DependentUpon>UpFileClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCheck.Designer.cs">
+      <DependentUpon>UserCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFun.cs" />
+    <Compile Include="UtilityVar.cs" />
+    <Compile Include="XmlHelper.cs" />
+    <Compile Include="ZipHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheckProjectForm.resx">
+      <DependentUpon>CheckProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnCodeForm.resx">
+      <DependentUpon>EnCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineerStatusForm.resx">
+      <DependentUpon>EngineerStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileOrgForm.resx">
+      <DependentUpon>FileOrgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUserControl.resx">
+      <DependentUpon>MainUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapProcessUserControl.resx">
+      <DependentUpon>MapProcessUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetadataForm.resx">
+      <DependentUpon>MetadataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrjForm.resx">
+      <DependentUpon>NewPrjForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectSubmitForm.resx">
+      <DependentUpon>ProjectSubmitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenForm.resx">
+      <DependentUpon>ReportGenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenOneForm.resx">
+      <DependentUpon>ReportGenOneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHPForm_SZGC.resx">
+      <DependentUpon>SHPForm_SZGC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SZFXUserControl.resx">
+      <DependentUpon>SZFXUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpFileClientForm.resx">
+      <DependentUpon>UpFileClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCheck.resx">
+      <DependentUpon>UserCheck.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
